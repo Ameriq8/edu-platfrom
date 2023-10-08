@@ -4,6 +4,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+const navigation = [
+  { name: 'من نحن', href: '/about-us' },
+  { name: 'الاساتذه', href: '/teachers' },
+  { name: 'فروعنا', href: '/branches' },
+  { name: 'الاستمارة الالكترونية', href: '/form' },
+];
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
@@ -14,10 +21,7 @@ export default function NavbarComponent() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <div
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
-      >
+      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Edu Platform</span>
@@ -38,68 +42,38 @@ export default function NavbarComponent() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <Link
-            href="/about-us"
-            className={classNames(
-              router.pathname == '/about-us'
-                ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                : '',
-              'text-sm font-semibold leading-6 text-gray-900 px-1',
-            )}
-          >
-            من نحن
-          </Link>
-          <Link
-            href="/teachers"
-            className={classNames(
-              router.pathname == '/teachers'
-                ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                : '',
-              'text-sm font-semibold leading-6 text-gray-900 px-1',
-            )}
-          >
-            الاساتذه
-          </Link>
-          <Link
-            href="/branches"
-            className={classNames(
-              router.pathname == '/branches'
-                ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                : '',
-              'text-sm font-semibold leading-6 text-gray-900 px-1',
-            )}
-          >
-            فروعنا
-          </Link>
-          <Link
-            href="/form"
-            className={classNames(
-              router.pathname == '/form'
-                ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                : '',
-              'text-sm font-semibold leading-6 text-gray-900 px-1',
-            )}
-          >
-            الاستمارة الالكترونية
-          </Link>
-        </Popover.Group>
+        <div className="hidden lg:flex lg:gap-x-12">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={classNames(
+                router.pathname == item.href
+                  ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
+                  : '',
+                'text-sm font-semibold leading-6 text-gray-900 px-1',
+              )}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
-            تسجيل الدخول <span aria-hidden="true">&rarr;</span>
+            تسجيل دخول <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
-      </div>
+      </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-50" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Edu Platform</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                alt="Logo"
               />
             </a>
             <button
@@ -114,57 +88,27 @@ export default function NavbarComponent() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link
-                  href="/about-us"
-                  className={classNames(
-                    router.pathname == '/about-us'
-                      ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                      : 'hover:bg-gray-50',
-                    '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 ',
-                  )}
-                >
-                  من نحن
-                </Link>
-                <Link
-                  href="/teachers"
-                  className={classNames(
-                    router.pathname == '/teachers'
-                      ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                      : 'hover:bg-gray-50',
-                    '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 ',
-                  )}
-                >
-                  الاساتذه
-                </Link>
-                <Link
-                  href="/branches"
-                  className={classNames(
-                    router.pathname == '/branches'
-                      ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                      : 'hover:bg-gray-50',
-                    '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 ',
-                  )}
-                >
-                  فروعنا
-                </Link>
-                <Link
-                  href="/form"
-                  className={classNames(
-                    router.pathname == '/form'
-                      ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
-                      : 'hover:bg-gray-50',
-                    '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 ',
-                  )}
-                >
-                  الاستمارة الالكترونية
-                </Link>
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={classNames(
+                      router.pathname == item.href
+                        ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
+                        : 'hover:bg-gray-50',
+                      '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 ',
+                    )}
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
               <div className="py-6">
                 <Link
                   href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  تسجيل الدخول
+                  تسجيل دخول
                 </Link>
               </div>
             </div>
