@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <>
       <NavbarComponent />
-      <div className="relative isolate px-6 lg:px-8">
+      
+      <div className="relative isolate top-40 px-6 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -30,7 +31,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-[55px]">
-              منصة مركز مانشستر البرطاني 
+              منصة مركز مانشستر البريطاني 
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               .منصة مركز مانشستر البرطاني وهي منصة الإكترونية تقدم دروس و محاضرات اونلاين
