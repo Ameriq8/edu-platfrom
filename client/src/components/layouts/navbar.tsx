@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Dialog, Popover } from '@headlessui/react';
+import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 const navigation = [
-  { name: 'من نحن', href: '/about-us' },
+  { name: 'من نحن', href: '/about' },
   { name: 'الاساتذه', href: '/teachers' },
   { name: 'فروعنا', href: '/branches' },
   { name: 'الاستمارة الالكترونية', href: '/form' },
@@ -49,9 +49,9 @@ export default function NavbarComponent() {
               href={item.href}
               className={classNames(
                 router.pathname == item.href
-                  ? 'border-b border-b-blue-600 hover:rounded hover:bg-slate-200'
+                  ? 'border-b border-b-blue-600 hover:rounded'
                   : '',
-                'text-sm font-semibold leading-6 text-gray-900 px-1',
+                'text-sm font-semibold leading-6 text-gray-900 px-1 hover:text-indigo-500',
               )}
             >
               {item.name}

@@ -1,9 +1,10 @@
+import FooterComponent from '@/components/layouts/footer';
 import NavbarComponent from '@/components/layouts/navbar';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
+    <div className='flex flex-col min-h-screen'>
       <NavbarComponent />
       
       <div className="relative isolate top-40 px-6 lg:px-8">
@@ -64,6 +65,8 @@ export default function Home() {
           />
         </div>
       </div>
-    </>
+
+      <FooterComponent />
+    </div>
   );
 }
