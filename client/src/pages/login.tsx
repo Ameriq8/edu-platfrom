@@ -49,19 +49,19 @@ export default function Login() {
               />
             </div>
             <div className="flex flex-col justify-start">
-              <a href="/" className="text-sm text-teal-500 hover:underline ml-auto">
+              <a href="/" className="text-sm text-blue-500 hover:underline ml-auto">
                 نسيت كلمة المرور؟
               </a>
 
               <Link
                 href="/"
-                className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 my-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+                className="text-white bg-blue-500 hover:bg-blue-400 shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 cursor-pointer focus:ring-4 my-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
               >
                 تسجيل الدخول الى حسابك
               </Link>
               <div className="text-sm font-medium text-gray-500 text-right">
                 ليس لديك حساب؟{' '}
-                <Link href="/register" className="text-teal-500 hover:underline">
+                <Link href="/register" className="text-blue-500 hover:underline">
                   انشئ حساب
                 </Link>
               </div>

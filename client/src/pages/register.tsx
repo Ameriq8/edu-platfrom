@@ -15,10 +15,15 @@ export default function Register() {
 
       <div className="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
         <div className="p-6 sm:p-8 lg:p-16 space-y-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center">انشاء حساب جديد</h2>
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center">
+            انشاء حساب جديد
+          </h2>
           <form className="mt-8 space-y-6" action="#">
             <div>
-              <label htmlFor="email" className="text-sm font-medium text-gray-900 block mb-2 text-right">
+              <label
+                htmlFor="email"
+                className="text-sm font-medium text-gray-900 block mb-2 text-right"
+              >
                 البريد الالكتروني
               </label>
               <input
@@ -31,7 +36,10 @@ export default function Register() {
               />
             </div>
             <div>
-              <label htmlFor="password" className="text-sm font-medium text-gray-900 block mb-2 text-right">
+              <label
+                htmlFor="password"
+                className="text-sm font-medium text-gray-900 block mb-2 text-right"
+              >
                 كلمة المرور
               </label>
               <input
@@ -61,19 +69,19 @@ export default function Register() {
             </div>
 
             <div className="flex flex-col justify-start">
-              <a href="/" className="text-sm text-teal-500 hover:underline ml-auto">
+              <a href="/" className="text-sm text-blue-500 hover:underline ml-auto">
                 نسيت كلمة المرور؟
               </a>
 
               <Link
                 href="/"
-                className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 my-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+                className="text-white bg-blue-500 hover:bg-blue-400 shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 cursor-pointer focus:ring-4 my-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
               >
                 انشاء الحساب
               </Link>
               <div className="text-sm font-medium text-gray-500 text-right">
                 لديك حساب؟{' '}
-                <Link href="/login" className="text-teal-500 hover:underline">
+                <Link href="/login" className="text-blue-500 hover:underline">
                   سجل الان
                 </Link>
               </div>
