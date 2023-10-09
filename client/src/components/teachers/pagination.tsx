@@ -107,7 +107,7 @@ export default function PaginationComponent({
     <div className="flex justify-center my-6">
       <Link
         href={`/teachers?page=1`}
-        className="flex items-center justify-center px-4 py-2 mx-1 text-gray-500 capitalize bg-gray-100 rounded-md rtl:-scale-x-100"
+        className="flex items-center justify-center px-4 py-2 mx-1 transform rounded-md sm:inline text-gray-700 transition-colors duration-300 bg-gray-100 hover:text-white hover:bg-blue-500"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -125,9 +125,9 @@ export default function PaginationComponent({
 
       {renderPageLinks()}
 
-      <a
+      <Link
         href={`/teachers?page=${totalPages}`}
-        className="flex items-center justify-center px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform bg-gray-100 rounded-md rtl:-scale-x-100  hover:bg-blue-500  hover:"
+        className="flex items-center justify-center px-4 py-2 mx-1 transform rounded-md sm:inline text-gray-700 transition-colors duration-300 transform bg-gray-100 hover:text-white hover:bg-blue-500"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ export default function PaginationComponent({
             clipRule="evenodd"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }
