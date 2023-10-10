@@ -8,9 +8,7 @@ export default function Register() {
         href="/"
         className="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10"
       >
-        <span className="self-center text-2xl font-bold whitespace-nowrap">
-          مركز مانشستر البريطاني
-        </span>
+        <span className="self-center text-2xl font-bold whitespace-nowrap">منصة احتراف </span>
       </Link>
 
       <div className="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">

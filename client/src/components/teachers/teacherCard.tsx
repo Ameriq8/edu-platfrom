@@ -23,7 +23,7 @@ export default function TeacherCardComponent({
 
       <h1 className="mt-4 text-2xl font-semibold text-gray-700">{teacher.name}</h1>
 
-      <p className="mt-2 text-gray-500">{teacher.price} د.ع</p>
+      <p className="mt-2 text-gray-500">{teacher.price.toLocaleString()} د.ع</p>
 
       <button className="px-4 py-2 font-semibold text-sm bg-sky-500 text-white rounded-md shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 cursor-pointer mt-4">
         اشترك الان

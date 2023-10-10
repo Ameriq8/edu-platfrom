@@ -10,7 +10,7 @@ export default function Teachers() {
   const router = useRouter();
   const query = router.query;
   const cardsPerPage = 12;
-  const currentPage = parseInt(query?.page as string);
+  const currentPage = parseInt(query?.page as string) || 1;
   const totalPages = normalizeTotalPages(teachersArray.length, cardsPerPage);
 
   return (
@@ -30,7 +30,7 @@ export default function Teachers() {
           </div>
 
           <p className="max-w-2xl mx-auto my-6 text-center text-gray-500">
-            .منصة مانشستر البريطاني لديها طاقم تدريسي كفوئ و ذو خبرات للعديد من السنوات في مجال
+            .منصة احتراف لديها طاقم تدريسي كفوئ و ذو خبرات للعديد من السنوات في مجال
             التعليم
             <br />
             .في منصتنا نقوم بتوفير طرق حديثة و متطوره في نظام التعليم الالكتروني لضمان جودة تعليم

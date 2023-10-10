@@ -28,7 +28,7 @@ export default function HeroComponent() {
         </div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-[55px]">
-            منصة مركز مانشستر البريطاني
+            منصة احتراف
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             .منصة مركز مانشستر البرطاني وهي منصة الإكترونية تقدم دروس و محاضرات اونلاين

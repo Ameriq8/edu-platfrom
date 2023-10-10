@@ -5,7 +5,7 @@ export default function FooterComponent(): React.JSX.Element {
     <footer className="my-auto relative">
       <div className="container px-6 py-8 mx-auto">
         <div className="flex flex-col items-center text-center">
-          <Link href="/">مركز مانشستر البريطاني</Link>
+          <Link href="/">مؤسسة مانشستر البريطاني</Link>
 
           <div className="flex flex-wrap justify-center mt-6 -mx-4">
             <Link
