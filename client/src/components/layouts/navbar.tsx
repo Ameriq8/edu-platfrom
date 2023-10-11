@@ -8,7 +8,7 @@ const navigation = [
   { name: 'من نحن', href: '/about' },
   { name: 'الاساتذه', href: '/teachers' },
   { name: 'فروعنا', href: '/branches' },
-  { name: 'الاستمارة الالكترونية', href: '/form' },
+  { name: 'فحص الشهادة', href: '/certificate-checking' },
 ];
 
 function classNames(...classes: string[]) {
@@ -48,9 +48,7 @@ export default function NavbarComponent() {
               key={item.name}
               href={item.href}
               className={classNames(
-                router.pathname == item.href
-                  ? 'border-b border-b-blue-600 hover:rounded'
-                  : '',
+                router.pathname == item.href ? 'border-b border-b-blue-600 hover:rounded' : '',
                 'text-sm font-semibold leading-6 text-gray-900 px-1 hover:text-indigo-500',
               )}
             >
@@ -68,14 +66,14 @@ export default function NavbarComponent() {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Edu Platform</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt="Logo"
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -89,7 +87,7 @@ export default function NavbarComponent() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className={classNames(
@@ -100,7 +98,7 @@ export default function NavbarComponent() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="py-6">

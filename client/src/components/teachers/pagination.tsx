@@ -106,7 +106,7 @@ export default function PaginationComponent({
   return (
     <div className="flex justify-center my-6">
       <Link
-        href={`/teachers?page=1`}
+        href={`/teachers?page=${currentPage - 1 >= 1 ? currentPage - 1 : 1}`}
         className="flex items-center justify-center px-4 py-2 mx-1 transform rounded-md sm:inline text-gray-700 transition-colors duration-300 bg-gray-100 hover:text-white hover:bg-blue-500"
       >
         <svg
@@ -126,7 +126,7 @@ export default function PaginationComponent({
       {renderPageLinks()}
 
       <Link
-        href={`/teachers?page=${totalPages}`}
+        href={`/teachers?page=${currentPage + 1 <= totalPages ? currentPage + 1 : currentPage}`}
         className="flex items-center justify-center px-4 py-2 mx-1 transform rounded-md sm:inline text-gray-700 transition-colors duration-300 bg-gray-100 hover:text-white hover:bg-blue-500"
       >
         <svg

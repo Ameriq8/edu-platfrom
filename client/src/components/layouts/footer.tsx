@@ -30,10 +30,10 @@ export default function FooterComponent(): React.JSX.Element {
             </Link>
 
             <Link
-              href="/form"
+              href="/certificate-checking"
               className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-indigo-500"
             >
-              الاستمارة الالكترونية
+              فحص الشهادة
             </Link>
           </div>
         </div>
