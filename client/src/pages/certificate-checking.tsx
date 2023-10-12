@@ -1,8 +1,14 @@
 import FooterComponent from '@/components/layouts/footer';
 import NavbarComponent from '@/components/layouts/navbar';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function certificateChecking() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleForm = () => {
+    setShowForm(true);
+  };
+
   return (
     <div>
       <NavbarComponent />
@@ -22,71 +28,87 @@ export default function certificateChecking() {
               placeholder="رقم الشهادة"
             />
 
-            <button className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-700 rounded-md sm:mx-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+            <button
+              onClick={handleForm}
+              className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-700 rounded-md sm:mx-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            >
               تحقق
             </button>
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto mt-8 mb-40 flex justify-center pt-8 md:pt-0">
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <table className="w-full text-sm text-left text-gray-500 border-4">
-            <thead className="text-gray-700 border-b-[3px]">
-              <tr>
-                <th scope="col" className="px-6 py-3">
-                  Certificate Details
-                </th>
-              </tr>
-            </thead>
+      {showForm ? (
+        <section className="container mx-auto mt-8 mb-40 flex justify-center pt-8 md:pt-0">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table className="w-full text-sm text-left text-gray-500 border-4">
+              <thead className="text-gray-700 border-b-[3px]">
+                <tr>
+                  <th scope="col" className="px-6 py-3">
+                    Certificate Details
+                  </th>
+                </tr>
+              </thead>
 
-            <tbody>
-              <tr className="bg-white border-b">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  Full Name
-                </th>
-                <td className="px-40 py-4">Muhammad Hadi Mahdi AL-Zmaili</td>
-              </tr>
+              <tbody>
+                <tr className="bg-white border-b">
+                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Full Name
+                  </th>
+                  <td className="px-40 py-4">Muhammad Hadi Mahdi AL-Zmaili</td>
+                </tr>
 
-              <tr className="bg-white border-b">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  Certificate Number
-                </th>
-                <td className="px-40 py-4">DR1554</td>
-              </tr>
+                <tr className="bg-white border-b">
+                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Certificate Number
+                  </th>
+                  <td className="px-40 py-4">DR1554</td>
+                </tr>
 
-              <tr className="bg-white">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                  Country
-                </th>
-                <td className="px-40 py-4">Iraq</td>
-              </tr>
+                <tr className="bg-white">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
+                  >
+                    Country
+                  </th>
+                  <td className="px-40 py-4">Iraq</td>
+                </tr>
 
-              <tr className="bg-white">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                  Certificate/s Type
-                </th>
-                <td className="px-40 py-4">I Don't Know</td>
-              </tr>
+                <tr className="bg-white">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
+                  >
+                    Certificate/s Type
+                  </th>
+                  <td className="px-40 py-4">I Don't Know</td>
+                </tr>
 
-              <tr className="bg-white">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                  Certificate/s Specialization
-                </th>
-                <td className="px-40 py-4">Training and education skills</td>
-              </tr>
+                <tr className="bg-white">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
+                  >
+                    Certificate/s Specialization
+                  </th>
+                  <td className="px-40 py-4">Training and education skills</td>
+                </tr>
 
-              <tr className="bg-white">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                  Publishing Date
-                </th>
-                <td className="px-40 py-4">04-Mar-2021</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
+                <tr className="bg-white">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
+                  >
+                    Publishing Date
+                  </th>
+                  <td className="px-40 py-4">04-Mar-2021</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
       <FooterComponent />
     </div>
   );
