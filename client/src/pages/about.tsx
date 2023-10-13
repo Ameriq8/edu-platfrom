@@ -1,11 +1,11 @@
-import FooterComponent from '@/components/layouts/footer';
-import NavbarComponent from '@/components/layouts/navbar';
+import Footer from '@/components/layouts/footer';
+import Navbar from '@/components/layouts/navbar';
 import React from 'react';
 
 export default function About() {
   return (
     <div>
-      <NavbarComponent />
+      <Navbar />
       <section
         className="w-full bg-center bg-cover h-[38rem] mt-20"
         style={{
@@ -134,7 +134,7 @@ export default function About() {
         </div>
       </section>
 
-      <FooterComponent />
+      <Footer />
     </div>
   );
 }

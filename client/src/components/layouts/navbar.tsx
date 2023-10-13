@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'من نحن', href: '/about' },
-  { name: 'الاساتذه', href: '/teachers' },
+  { name: 'الاساتذه', href: '/teachers/courses' },
   { name: 'فروعنا', href: '/branches' },
   { name: 'فحص الشهادة', href: '/certificate-checking' },
 ];
@@ -15,7 +15,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function NavbarComponent() {
+export default function Navbar() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

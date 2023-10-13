@@ -1,5 +1,5 @@
-import FooterComponent from '@/components/layouts/footer';
-import NavbarComponent from '@/components/layouts/navbar';
+import Footer from '@/components/layouts/footer';
+import Navbar from '@/components/layouts/navbar';
 import React, { useState } from 'react';
 
 export default function certificateChecking() {
@@ -11,7 +11,7 @@ export default function certificateChecking() {
 
   return (
     <div>
-      <NavbarComponent />
+      <Navbar />
 
       <section className="bg-white mt-40">
         <div className="max-w-3xl px-6 py-16 mx-auto text-center">
@@ -109,7 +109,7 @@ export default function certificateChecking() {
           </div>
         </section>
       ) : null}
-      <FooterComponent />
+      <Footer />
     </div>
   );
 }

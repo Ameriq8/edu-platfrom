@@ -9,7 +9,7 @@ import React from 'react';
 export default function Teachers() {
   const router = useRouter();
   const query = router.query;
-  const cardsPerPage = 12;
+  const cardsPerPage = 8;
   const currentPage = parseInt(query?.page as string) || 1;
   const totalPages = normalizeTotalPages(teachersArray.length, cardsPerPage);
 

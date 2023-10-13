@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function BranchesComponent() {
+export default function Branches() {
   return (
     <div className="mb-40">
       <div className="container px-6 py-10 mx-auto">

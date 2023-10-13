@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function FooterComponent(): React.JSX.Element {
+export default function Footer(): React.JSX.Element {
   return (
     <footer className="my-auto relative">
       <div className="container px-6 py-8 mx-auto">
@@ -16,7 +16,7 @@ export default function FooterComponent(): React.JSX.Element {
             </Link>
 
             <Link
-              href="/teachers"
+              href="/teachers/courses"
               className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-indigo-500"
             >
               الاساتذه

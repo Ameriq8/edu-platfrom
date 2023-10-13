@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
-import BranchesComponent from './branches';
+import Branches from './branches';
 
-export default function HeroComponent() {
+export default function Hero() {
   return (
     <div className="relative isolate top-40 px-6 lg:px-8">
       <div
@@ -49,6 +49,9 @@ export default function HeroComponent() {
           </div>
         </div>
       </div>
+
+      <Branches />
+      
       <div
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"
@@ -61,8 +64,6 @@ export default function HeroComponent() {
           }}
         />
       </div>
-
-      <BranchesComponent />
     </div>
   );
 }

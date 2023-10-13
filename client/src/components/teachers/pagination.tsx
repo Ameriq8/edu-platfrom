@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-export default function PaginationComponent({
+export default function Pagination({
   currentPage,
   totalPages,
 }: {
