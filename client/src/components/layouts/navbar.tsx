@@ -7,7 +7,7 @@ import Link from 'next/link';
 const navigation = [
   { name: 'من نحن', href: '/about' },
   { name: 'الاساتذه', href: '/teachers/courses' },
-  { name: 'فروعنا', href: '/branches' },
+  { name: 'فروعنا', href: '/locations' },
   { name: 'فحص الشهادة', href: '/certificate-checking' },
 ];
 

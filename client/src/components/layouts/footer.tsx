@@ -23,7 +23,7 @@ export default function Footer(): React.JSX.Element {
             </Link>
 
             <Link
-              href="/branches"
+              href="/locations"
               className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-indigo-500"
             >
               الفروع

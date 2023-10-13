@@ -23,7 +23,7 @@ export default function Pagination({
   const pageNumbers = getPageNumbers();
 
   if (totalPages < currentPage) {
-    router.push(`/teachers?page=${totalPages}`);
+    router.push(`/teachers/coursess?page=${totalPages}`);
   }
 
   const renderPageLinks = () => {
@@ -31,7 +31,7 @@ export default function Pagination({
       // Render all page links if the total pages are 6 or fewer
       return pageNumbers.map((pageNumber) => (
         <Link
-          href={`/teachers?page=${pageNumber}`}
+          href={`/teachers/courses?page=${pageNumber}`}
           key={pageNumber}
           className={`px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform rounded-md sm:inline ${
             currentPage === pageNumber
@@ -52,7 +52,7 @@ export default function Pagination({
       if (currentPage !== 1) {
         links.push(
           <Link
-            href={`/teachers?page=1`}
+            href={`/teachers/courses?page=1`}
             key="first"
             className={`px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform rounded-md sm:inline bg-gray-100 hover:text-white hover:bg-blue-500`}
           >
@@ -75,7 +75,7 @@ export default function Pagination({
       links.push(
         ...pageNumbers.slice(currentPage - 1, currentPage + 2).map((pageNumber) => (
           <Link
-            href={`/teachers?page=${pageNumber}`}
+            href={`/teachers/courses?page=${pageNumber}`}
             key={pageNumber}
             className={`px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform rounded-md sm:inline ${
               currentPage === pageNumber
@@ -106,7 +106,7 @@ export default function Pagination({
   return (
     <div className="flex justify-center my-6">
       <Link
-        href={`/teachers?page=${currentPage - 1 >= 1 ? currentPage - 1 : 1}`}
+        href={`/teachers/courses?page=${currentPage - 1 >= 1 ? currentPage - 1 : 1}`}
         className="flex items-center justify-center px-4 py-2 mx-1 transform rounded-md sm:inline text-gray-700 transition-colors duration-300 bg-gray-100 hover:text-white hover:bg-blue-500"
       >
         <svg
@@ -126,7 +126,7 @@ export default function Pagination({
       {renderPageLinks()}
 
       <Link
-        href={`/teachers?page=${currentPage + 1 <= totalPages ? currentPage + 1 : currentPage}`}
+        href={`/teachers/courses?page=${currentPage + 1 <= totalPages ? currentPage + 1 : currentPage}`}
         className="flex items-center justify-center px-4 py-2 mx-1 transform rounded-md sm:inline text-gray-700 transition-colors duration-300 bg-gray-100 hover:text-white hover:bg-blue-500"
       >
         <svg

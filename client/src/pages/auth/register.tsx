@@ -67,10 +67,6 @@ export default function Register() {
             </div>
 
             <div className="flex flex-col justify-start">
-              <Link href="/" className="text-sm text-blue-500 hover:underline ml-auto">
-                نسيت كلمة المرور؟
-              </Link>
-
               <button
                 className="text-white bg-blue-500 hover:bg-blue-400 shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 cursor-pointer focus:ring-4 my-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
               >
