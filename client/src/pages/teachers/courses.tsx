@@ -1,7 +1,7 @@
 import Footer from '@/components/layouts/footer';
 import Navbar from '@/components/layouts/navbar';
 import Pagination from '@/components/teachers/pagination';
-import TeacherCard from '@/components/teachers/teacherCard';
+import TeachersCards from '@/components/teachers/teachersCards';
 import { normalizeTotalPages } from '@/utils/helpers';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -17,7 +17,7 @@ export default function Teachers() {
     <>
       <Navbar />
 
-      <section className="mt-28">
+      <div className="mt-28">
         <div className="container px-6 py-10 mx-auto">
           <h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl">
             طاقم اساتذتنا المحترمين
@@ -55,10 +55,10 @@ export default function Teachers() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 mt- xl:mt-8 md:grid-cols-2 xl:grid-cols-4">
-            <TeacherCard teachers={teachersArray} limit={cardsPerPage} page={currentPage} />
+            <TeachersCards teachers={teachersArray} limit={cardsPerPage} page={currentPage} />
           </div>
         </div>
-      </section>
+      </div>
 
       <Pagination currentPage={currentPage} totalPages={totalPages} />
 
@@ -67,7 +67,7 @@ export default function Teachers() {
   );
 }
 
-const teachersArray = [
+export const teachersArray = [
   {
     id: '1',
     name: 'Teacher 1',

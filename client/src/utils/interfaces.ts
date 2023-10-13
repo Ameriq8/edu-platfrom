@@ -15,3 +15,7 @@ export interface ITeacher {
   price: number;
   discount: number;
 }
+
+export interface StudentTeacherCardProps {
+  teachers: ITeacher[];
+}

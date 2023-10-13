@@ -1,25 +1,15 @@
 import { TeacherCardProps } from '@/utils/interfaces';
-import { Dialog, Transition } from '@headlessui/react';
-import React, { Fragment, useEffect, useState } from 'react';
+import Link from 'next/link';
+import React from 'react';
 
-export default function TeacherCard({
+export default function TeachersCards({
   teachers,
   limit,
   page,
 }: TeacherCardProps): React.JSX.Element[] {
-  const [isOpen, setIsOpen] = useState(false);
-
   const startIndex = (page - 1) * limit;
   const endIndex = startIndex + limit;
   const teachersToDisplay = teachers.slice(startIndex, endIndex);
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
 
   return teachersToDisplay.map((teacher, index) => (
     <>
@@ -35,14 +25,16 @@ export default function TeacherCard({
 
         <h1 className="mt-4 text-2xl font-semibold text-gray-700">{teacher.name}</h1>
 
-        <p className="mt-2 text-gray-500">{teacher.price.toLocaleString()} د.ع</p>
+        <p className="mt-2 text-gray-500" dir="RTL">
+          {teacher.price.toLocaleString()} د.ع
+        </p>
 
-        <button
-          onClick={openModal}
+        <Link
+          href={`/teachers/courses/${teacher.id}`}
           className="px-4 py-2 font-semibold text-sm bg-sky-500 text-white rounded-md shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 cursor-pointer mt-4"
         >
-          اشترك الان
-        </button>
+          عرض المزيد
+        </Link>
       </div>
     </>
   ));
