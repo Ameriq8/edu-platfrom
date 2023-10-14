@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import Branches from './branches';
 
 export default function Hero() {
   return (
-    <div className="relative isolate top-40 px-6 lg:px-8">
+    <div className="relative isolate top-40 mb-40 px-6 lg:px-8">
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -21,10 +20,10 @@ export default function Hero() {
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             تخفيضات مميزه بمناسبة حلول العام الدارسي الجديد.{' '}
-            <a href="#" className="font-semibold text-blue-600">
+            <Link href="/teachers/courses" className="font-semibold text-blue-600">
               <span className="absolute inset-0" aria-hidden="true" />
               اضغط لمعرفة المزيد
-            </a>
+            </Link>
           </div>
         </div>
         <div className="text-center">
@@ -38,19 +37,17 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
-              href="#"
+              href="/teachers/courses"
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               انضم معنا
             </Link>
-            <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
               المزيد <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
       </div>
-
-      <Branches />
       
       <div
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"

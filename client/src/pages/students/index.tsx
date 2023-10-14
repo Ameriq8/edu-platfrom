@@ -1,5 +1,5 @@
 import Footer from '@/components/layouts/footer';
-import StudentNav from '@/components/layouts/studentNavbar';
+import StudentNavbar from '@/components/layouts/studentNavbar';
 import React from 'react';
 import {teachersArray} from '../teachers/courses';
 import StudentTeachersCards from '@/components/students/studentTeachersCards';
@@ -7,7 +7,7 @@ import StudentTeachersCards from '@/components/students/studentTeachersCards';
 export default function StudentHomePage() {
   return (
     <>
-      <StudentNav />
+      <StudentNavbar />
 
       <div className="mt-28">
         <div className="container px-6 py-10 mx-auto">
@@ -25,7 +25,7 @@ export default function StudentHomePage() {
             هذه هي قائمة الاساتذه الذين قمت بالاشتراك في دوراتهم.
           </p>
 
-          <div className="grid grid-cols-1 gap-8 mt- xl:mt-8 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 xl:mt-8 md:grid-cols-2 xl:grid-cols-4">
             <StudentTeachersCards teachers={teachersArray} />
           </div>
         </div>
