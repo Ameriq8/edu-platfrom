@@ -3,20 +3,19 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import DropdownMenuDemo from './userDropdown';
 
 const navigation = [
-  { name: 'من نحن', href: '/about' },
-  { name: 'الاساتذه', href: '/teachers/courses' },
-  { name: 'فروعنا', href: '/locations' },
-  { name: 'فحص الشهادة', href: '/certificate-checking' },
+  { name: 'الدورات', href: '/admin/courses' },
+  { name: 'الاساتذه', href: '/admin/teachers' },
+  { name: 'الطلاب', href: '/admin/students' },
+  { name: 'الشهادات', href: '/admin/certificates' },
 ];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Navbar() {
+export default function AdminNavbar() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -60,10 +59,9 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <Link href="/auth/login" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/auth/login" className="text-sm font-semibold leading-6 text-gray-900">
             تسجيل دخول <span aria-hidden="true">&rarr;</span>
-          </Link> */}
-          <DropdownMenuDemo />
+          </Link>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -106,14 +104,12 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="py-6">
-                {/* <Link
+                <Link
                   href="/auth/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   تسجيل دخول
-                </Link> */}
-          <DropdownMenuDemo />
-
+                </Link>
               </div>
             </div>
           </div>
